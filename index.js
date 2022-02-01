@@ -16,6 +16,15 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use('/login',(req, res, next)=>{
+    if(req.query.msg === 'fail'){
+        msg = 'Either password or user-id does not match!'
+    }else{
+        msg= '';
+    }
+    next();
+});
+
 app.get('/', (req, res, next)=>{
     res.send('<h1><a href="/login"> login</a></h1>')
 });
@@ -23,7 +32,7 @@ app.get('/', (req, res, next)=>{
 app.get('/login', (req, res, next)=>{
     res.render('index', {
         title : 'login',
-        msg :``, 
+        // msg :`hello`, 
 
     });
 });
@@ -34,11 +43,13 @@ app.post('/login', (req, res, next)=>{
 
     if(userPassword === 'xxx4'){
         res.cookie('cookieUserId', userId);
-        res.redirect('/welcome?id:'+userId);
+        res.redirect('/welcome?id='+userId);
         console.log(res.locals.id);
         
     }else{
-        res.redirect('/login?id:fail');
+        res.redirect('/login?msg=fail')
+        
+        console.log(req.query.msg);
     }
 });
 
