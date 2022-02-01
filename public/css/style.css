@@ -1,0 +1,89 @@
+body{
+    width: 80%;
+    background-color: rgb(240, 230, 140, 0.6);
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card{
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.4);
+    transition: 0.5s;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 5px;
+    height: 500px;
+
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, 0.4);
+}
+
+
+
+.container{
+    padding: 2px 16px;
+    background: #008CBA;
+    color: whitesmoke;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.5);
+    height: 15%;
+}
+
+input{
+    text-align: center;
+    background-color: rgba(210, 210, 220, 0.8);
+    padding: 16px 31px;
+    display: block;
+    margin: 50px;
+    width: 70%;
+    text-decoration: none;
+    font-size: 16px;
+    border: 0.5px solid #008CBA;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.4);
+    color: black;
+}
+
+.btn{
+    background-color: whitesmoke; /* Green */
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid #008CBA;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #008CBA;
+    color: white;
+    
+}
+a{
+    text-decoration: none;
+    color: #008CBA;
+    margin-bottom: 30px;
+}
+.link{
+    
+    padding-bottom: 30px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 0.05em;
+}
+
+.user-id{
+    margin: 30px;
+}
+.welcome{
+    padding-top: 15%;
+}
