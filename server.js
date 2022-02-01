@@ -15,8 +15,21 @@ app.use(helmet());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// passing query string
+app.use('/home', (req, res, next)=>{
+    if(req.query.msg ==='fail'){
+        res.locals.msg = 'The password or user Id does not match!'
+    }
+    else{
+        res.locals.msg='';
+    }
+
+    next();
+});
+
+
 app.get('/home', (req, res, next)=>{
-    res.render('index', {title: 'Home', msg: ''})
+    res.render('index', {title: 'Home'})
 });
 
 app.post('/login', (req, res, next)=>{

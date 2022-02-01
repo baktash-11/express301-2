@@ -69,6 +69,13 @@ input{
     color: white;
     
 }
+input:hover {
+    color: #008CBA;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 0.4);
+    transition: 0.5s;
+
+}
 a{
     text-decoration: none;
     color: #008CBA;
@@ -86,4 +93,13 @@ a{
 }
 .welcome{
     padding-top: 15%;
+}
+.error{
+    background-color: rgba(250, 150, 150, 0.8);
+    color: black;
+    width: 70%;
+    margin: auto;
+    /* border: 0.1px solid red; */
+    border-radius: 5px;
+
 }

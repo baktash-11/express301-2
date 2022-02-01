@@ -11,12 +11,13 @@
     <div class="card">
         <div class="container">
             <h2 >Welcome to Login</h2>
-            <h2 class="welcome-heading"><%= msg %></h2>
+            <h2 class="welcome-heading"><%= %></h2>
         </div>
         <form action="/login" method="post" class="login">
             <input type="text" name="user_id" id="" placeholder="Please enter your id">
             <input type="password" name="user_password" id="" placeholder="Enter your password here!">
             <button class="btn">Login</button>
+            <p class="error"><%= msg %></p>
             <p class="link">
                 Not a user yet? <a href="/register">Create an account</a>
             </p>
